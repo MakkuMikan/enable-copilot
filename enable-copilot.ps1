@@ -21,7 +21,7 @@ Remove-Item -Recurse -Force ".\vivetool"
 Remove-Item ".\vivetool.zip"
 Pop-Location
 
-$ConfirmBox = [System.Windows.MessageBox]::Show("Would you like to reboot your computer to enable Windows Copilot?", "Shutdown Confirmation",  [System.Windows.MessageBoxButton]::YesNo)
+$ConfirmBox = [System.Windows.Forms.MessageBox]::Show("Would you like to reboot your computer to enable Windows Copilot?", "Shutdown Confirmation",  [System.Windows.Forms.MessageBoxButtons]::YesNo)
 
 If ($ConfirmBox -eq "Yes") {
   Restart-Computer
